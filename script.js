@@ -8,23 +8,17 @@ const decrement2 = document.getElementById('decrement2');
 const iniciar=document.getElementById('iniciar');
 const marcaa=document.getElementById('marca');
 const pausar=document.getElementById('pausa');
-const marcaElement = document.getElementById('marcaa');
-const marcaElement2 = document.getElementById('marcaa2');
-const marcaElement3 = document.getElementById('marcaa3');
-const marcaElement4 = document.getElementById('marcaa4');
-const marcaElement5 = document.getElementById('marcaa5');
-const marcaElement6 = document.getElementById('marcaa6');
-const marcaElement7 = document.getElementById('marcaa7');
-const marcaElement8 = document.getElementById('marcaa8');
-const marcaElement9 = document.getElementById('marcaa9');
+const flag = document.getElementById('flag');
+
 let contadormarcaElement=0;
 let counter = 0;
 let counter2=0;
+let marcas = [];
 
 function updateTime(){
     counterElement.textContent = counter;
     counter2Element.textContent = counter2;
-    marcaElement.textContent = marcaElement.textContent;
+    flag.textContent=marcas.join("\n");
     
 }
 function incrementCounter(){
@@ -60,6 +54,7 @@ function decrementCounter2(){
 function resetHora(){
     counter = 0;
     counter2 = 0;
+    marcas.splice(0,marcas.length);
     parartiempo();
     updateTime();
 }
@@ -84,46 +79,11 @@ function iniciarHora() {
 function parartiempo(){
     clearInterval(timer);
 }
+
 function marca(){
-    switch(contadormarcaElement){
-        case 0:
-            marcaElement.textContent = counter+":"+counter2;
-            contadormarcaElement++;
-            break;
-        case 1:
-            marcaElement2.textContent = counter+":"+counter2;
-            contadormarcaElement++;
-            break;
-        case 2:
-            marcaElement3.textContent = +counter+":"+counter2;
-            contadormarcaElement++;
-            break;
-        case 3:
-            marcaElement4.textContent = counter+":"+counter2;
-            contadormarcaElement++;
-            break;
-        case 4:
-            marcaElement5.textContent = counter+":"+counter2;
-            contadormarcaElement++;
-            break;
-        case 5:
-            marcaElement6.textContent = counter+":"+counter2;
-            contadormarcaElement++;
-            break;
-        case 6:
-            marcaElement7.textContent = counter+":"+counter2;
-            contadormarcaElement++;
-            break;
-        case 7:
-            marcaElement8.textContent = counter+":"+counter2;
-            contadormarcaElement++;
-            break;
-        case 8:
-            marcaElement9.textContent = counter+":"+counter2;
-            contadormarcaElement=0;
-            break;
-        
-    } 
+
+    marcas.push(counter+":"+counter2);
+
 }
 function pausa(){
     parartiempo();

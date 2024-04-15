@@ -1,3 +1,4 @@
+
 body{
     width: 100vw;
     height: 100vh;
@@ -5,24 +6,37 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-color: white;
 }
-    
+.container{
+    width: 270px;
+    height: 270px;
+    border-radius: 100%;
+    background-color: black;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 #counter{
     font-size: 100px;
-    font-weight: bold;
+    font-family: 'Tilt Neon', sans-serif;
+    color: yellow;
+    
+
 
    
 }
 #counter2{
     font-size: 100px;
-    font-weight: bold;
-  
-    
-    
+    font-family: 'Tilt Neon', sans-serif;
+    color: yellow;
 }
 #puntos{
     font-size: 100px;
-    font-weight: bold;
+    font-family: 'Tilt Neon', sans-serif;
+    color: yellow;
     
     
 }
@@ -35,4 +49,21 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    border: none; /* Elimina el borde del botón */
+    background-color: transparent; /* Establece el fondo del botón como transparente */
+    
+}
+#increment,#increment2,#decrement,#decrement2,#reset,#iniciar,#marca,#pausa{
+    border: none; /* Elimina el borde del botón */
+    background-color: transparent; /* Establece el fondo del botón como transparente */
+
+    font-weight: bold;
+    font-family: 'Tilt Neon', sans-serif;
+    color: yellow;
+    border-radius: 100%;
+}
+#flag {
+    white-space: pre-line;
+    font-family: 'Tilt Neon', sans-serif;
+    float: left;
 }
