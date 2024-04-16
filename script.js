@@ -9,7 +9,7 @@ const iniciar=document.getElementById('iniciar');
 const marcaa=document.getElementById('marca');
 const pausar=document.getElementById('pausa');
 const flag = document.getElementById('flag');
-
+let i=0;
 let contadormarcaElement=0;
 let counter = 0;
 let counter2=0;
@@ -81,8 +81,8 @@ function parartiempo(){
 }
 
 function marca(){
-
-    marcas.push(counter+":"+counter2);
+    i++;
+    marcas.push(i+". ----> "+counter+":"+counter2);
 
 }
 function pausa(){

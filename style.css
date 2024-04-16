@@ -5,15 +5,16 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    background-color: white;
+    flex-direction: row;
+    background-color: black;
 }
 .container{
-    width: 270px;
-    height: 270px;
-    border-radius: 100%;
-    background-color: black;
-   
+    width: 80%;
+    height: 100%;
+    border-radius: 2%;
+    
+    justify-content: center;
+    align-items: center;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -50,8 +51,12 @@ body{
     align-items: center;
     flex-direction: column;
     border: none; /* Elimina el borde del botón */
-    background-color: transparent; /* Establece el fondo del botón como transparente */
-    
+    background-color: transparent; /* Establece el fondo del botón como transparente */ 
+}
+
+#increment:hover,#increment2:hover,#decrement:hover,#decrement2:hover,#reset:hover,#iniciar:hover,#marca:hover,#pausa:hover{
+    color:red;
+    background-color: yellow;
 }
 #increment,#increment2,#decrement,#decrement2,#reset,#iniciar,#marca,#pausa{
     border: none; /* Elimina el borde del botón */
@@ -62,8 +67,30 @@ body{
     color: yellow;
     border-radius: 100%;
 }
-#flag {
+#flags {
+    
     white-space: pre-line;
-    font-family: 'Tilt Neon', sans-serif;
-    float: left;
+    font-family: 'Tilt Neon', sans-serif;   
+    background-color: black;
+    border: 1px solid white;
+    width: 270px;
+    height: 100%;
+    display: flex;
+    color: yellow;
+    
+    flex-direction: column;
+    
+    overflow: auto; /* Esto agregará una barra de desplazamiento vertical si el contenido es demasiado largo */
+    
 }
+#flagstext{
+    background-color: white;
+    width: 100%;
+    height: 10%;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
